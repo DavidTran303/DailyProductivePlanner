@@ -71,8 +71,32 @@ textarea {
 }
 
 /* block 1 */
-.row-1 {
+.row-past {
   border-style: solid;
   width: 100%;
   height: 5rem;
+}
+
+.row-past:hover {
+  color: red;
+}
+
+.row-present {
+  border-style: solid;
+  width: 100%;
+  height: 5rem;
+}
+
+.row-present:hover {
+  color: blue;
+}
+
+.row-future {
+  border-style: solid;
+  width: 100%;
+  height: 5rem;
+}
+
+.row-future:hover {
+  color: yellow;
 }
