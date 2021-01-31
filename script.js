@@ -13,17 +13,22 @@ document.getElementById("text4").innerHTML=moment().add(1, 'days').calendar();
 //type in boxes
 document.addEventListener("click", function(){
 
-localStorage.setItem("Day", document.getElementById("userText").value);
+localStorage.setItem("LastWeek", document.getElementById("userText").value);
+document.getElementById("userText").innerHTML = localStorage.getItem("LastWeek");
 
-document.getElementById("userText").innerHTML = localStorage.getItem("Day");
+localStorage.setItem("Yesterday", document.getElementById("userText1").value);
+document.getElementById("userText1").innerHTML = localStorage.getItem("Yesterday");
+
+localStorage.setItem("Today", document.getElementById("userText2").value);
+document.getElementById("userText2").innerHTML = localStorage.getItem("Today");
+
+localStorage.setItem("Hours Ago", document.getElementById("userText3").value);
+document.getElementById("userText3").innerHTML = localStorage.getItem("Hours Ago");
+
+localStorage.setItem("Tomorrow", document.getElementById("userText4").value);
+document.getElementById("userText4").innerHTML = localStorage.getItem("Tomorrow");
 }
 );
 
 
-document.addEventListener("click", function(){
 
-localStorage.setItem("Day", document.getElementById("userText1").value);
-
-document.getElementById("userText1").innerHTML = localStorage.getItem("Day");
-}
-);
