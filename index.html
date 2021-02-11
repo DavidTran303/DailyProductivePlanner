@@ -6,63 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
     <title>Work Day Scheduler</title>
 
-    
 
 
 </head>
 
-
-
-
 <body>
+
+
+    <!-- Timeblocks go here -->
     <header class="jumbotron">
         <h1 class="display-3">Work Day Scheduler</h1>
-        <p class="lead">A simple calendar app for scheduling your work day</p>
-        <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-        <!-- Timeblocks go here -->
-        <div class="row-past" id="row-past" type="text">
-            <div class="col-8" id="text"> </div>
-            <textarea id=userText class= "textarea"> </textarea>
-            <button class = ".saveBtn" id = "saveBtn">save</button>
-        </div>
+        <p id="textarea"></p>
 
-        <div class="row-past" id="row-past" type="text">
-            <div class="col-8" id="text1"></div>
-            <textarea id=userText1> </textarea>
-            <button class=".saveBtn" id="saveBtn">save</button>
-        </div>
 
-        <div class="row-present" id="row-future" type="text">
-            <div class="col-8" id="text2"></div>
-            <textarea id=userText2> </textarea>
-            <button class=".saveBtn" id="saveBtn">save</button>
-        </div>
-        
-        <div class="row-future" id="row-future" type="text">
-            <div class="col-8" id="text3"></div>
-            <textarea id=userText3> </textarea>
-            <button class=".saveBtn" id="saveBtn">save</button>
-        </div>
-        
-        <div class="row-future" id="row-future" type="text">
-            <div class="col-8" id="text4"></div>
-            <textarea id=userText4> </textarea>
-            <button class=".saveBtn" id="saveBtn">save</button>
-        </div>
-        
-    </div>
-</div>  
-<script src="script.js"></script>
+        <div class="container0">
+            <div class="col">
+                <div class="row">
+                    <div class="box"> 9 AM</div>
+                    <textarea type="text" id="textarea"></textarea>
+                    <button class="saveBtn" id="saveBtn">save</button>
+                </div>
+            </div>
+            <div class="container0">
+                <div class="col">
+                    <div class="row">
+                        <div class="box">10 AM</div>
+                        <textarea type="text" id="textarea"></textarea>
+                        <button class="saveBtn" id="saveBtn">save</button>
+                    </div>
+                </div>
+                <div class="container0">
+                    <div class="col">
+                        <div class="row">
+                            <div class="box">11 AM</div>
+                            <textarea type="text" id="textarea"></textarea>
+                            <button class="saveBtn" id="saveBtn">save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container1">
+                    <div class="col">
+                        <div class="row">
+                            <div class="box">12 PM</div>
+                            <textarea type="text" id="textarea"></textarea>
+                            <button class="saveBtn" id="saveBtn">save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container1">
+                    <div class="col">
+                        <div class="row">
+                            <div class="box">1 PM</div>
+                            <textarea type="text" id="textarea"></textarea>
+                            <button class="saveBtn" id="saveBtn">save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container1">
+                    <div class="col">
+                        <div class="row">
+                            <div class="box">2 PM</div>
+                            <textarea type="text" id="textarea"></textarea>
+                            <button class="saveBtn" id="saveBtn">save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="col">
+                        <div class="row">
+                            <div class="box">3 PM</div>
+                            <textarea type="text" id="textarea"></textarea>
+                            <button class="saveBtn" id="saveBtn">save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="col">
+                        <div class="row">
+                            <div class="box">4 PM</div>
+                            <textarea type="text" id="textarea"></textarea>
+                            <button class="saveBtn" id="saveBtn">save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="col">
+                        <div class="row">
+                            <div class="box">5 PM</div>
+                            <textarea type="text" id="textarea"></textarea>
+                            <button class="saveBtn" id="saveBtn">save</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- beginning of jQuery -->
+                <script type="text/javascript">
+                    $(document).ready(function () {
+
+                        //inserting moment.js timezone
+                        $("p").append(moment().format('MMMM Do YYYY, h:mm:ss a')); //today date
+
+                        //saving to local storage
+                        $(".saveBtn").on("click", function () {
+                            // Store
+                            localStorage.setItem("task", "homework");
+
+                            document.getElementById(".textarea") = localStorage.getItem("task");
+
+                            $(".textarea").html = local.getItem("task");
+
+                        });
+
+
+
+
+
+
+
+
+
+
+                    });
+                </script>
 </body>
 
 </html>
